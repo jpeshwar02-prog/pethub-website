@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetList Tamil - Farm & Stallions</title>
+  <link rel="stylesheet" href="cssstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#" class="logo">PetList Tamil</a>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#stallions">Stallions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-overlay"></div>
+  
+  <div class="hero-content">
+    <h1>Showcase Your Stallion</h1>
+    <p>Reach horse lovers across Tamil Nadu with your stallion listing.</p>
+
+    <div class="hero-cta">
+      <a href="#stallions" class="btn btn-primary">Post Now</a>
+      <a href="#services" class="btn btn-ghost">Learn More</a>
+    </div>
+
+    <ul class="badges">
+      <li><i class="fas fa-check-circle"></i> Trusted Platform</li>
+      <li><i class="fas fa-bullhorn"></i> Promote Your Stallion</li>
+      <li><i class="fas fa-camera"></i> Professional Media</li>
+    </ul>
+  </div>
+
+  </section>
+
+<!-- Search Filter Section -->
+<section class="hero-search">
+  <div class="container">
+    <form class="search-form">
+      <select name="type">
+        <option value="">Select Type</option>
+        <option value="farm">Farm</option>
+        <option value="stallion">Stallion</option>
+      </select>
+
+      <select name="district">
+        <option value="">Select District</option>
+        <option value="trichy">Trichy</option>
+        <option value="chennai">Chennai</option>
+        <option value="madurai">Madurai</option>
+        <!-- Add more districts -->
+      </select>
+
+      <button type="submit" class="btn-primary">Search</button>
+    </form>
+  </div>
+</section>
+
+<section class="section section-alt" id="services">
+  <div class="container reveal">
+    <h2>Everything for Horse Enthusiasts</h2>
+    <p>
+      Welcome to <strong>PetList Tamil</strong> — connecting horse lovers, breeders, and farms across Tamil Nadu.
+    </p>
+
+    <div class="services-grid">
+      <div class="service-box">
+        <i class="fas fa-camera"></i>
+        <h3>Pet Photography</h3>
+      </div>
+      <div class="service-box">
+        <i class="fab fa-youtube"></i>
+        <h3>YouTube Channel</h3>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-warehouse"></i>
+        <h3>Farm Listing</h3>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-horse"></i>
+        <h3>Stallion Listing</h3>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-shopping-bag"></i>
+        <h3>Pet Product Ads</h3>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>Event Updates</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ? Top Stallions Section -->
+<section class="top-stallions">
+  <div class="stallion-container">
+    <h2 class="section-title">Top Stallions</h2>
+    <p class="section-subtitle">
+      Discover our finest Marwari stallions, carefully bred for strength, agility and graceful temperament.
+    </p>
+
+    <div class="stallion-slider-wrapper">
+      <div class="stallion-slider">
+        
+        <!-- Stallion Card 1 -->
+        <article class="stallion-card">
+          <div class="stallion-image">
+            <img src="stallion1.jpg" alt="Thunder King">
+          </div>
+          <div class="stallion-details">
+            <div class="details-content">
+              <h3 class="horse-name">Thunder King</h3>
+              <p><i class="fa-solid fa-user"></i> Owner: <span>Arjun Rao</span></p>
+              <p><i class="fa-solid fa-tractor"></i> Farm: <span>Sunrise Ranch</span></p>
+              <p><i class="fa-solid fa-map-location-dot"></i> District: <span>Trichy, TN</span></p>
+            </div>
+            <div class="details-footer">
+              <a href="#" class="details-btn">Show Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stallion Card 2 -->
+        <article class="stallion-card">
+          <div class="stallion-image">
+            <img src="stallion2.jpg" alt="Royal Blaze">
+          </div>
+          <div class="stallion-details">
+            <div class="details-content">
+              <h3 class="horse-name">Royal Blaze</h3>
+              <p><i class="fa-solid fa-user"></i> Owner: <span>Meera Farms</span></p>
+              <p><i class="fa-solid fa-tractor"></i> Farm: <span>Green Valley</span></p>
+              <p><i class="fa-solid fa-map-location-dot"></i> District: <span>Chennai, TN</span></p>
+            </div>
+            <div class="details-footer">
+              <a href="#" class="details-btn">Show Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stallion Card 3 -->
+        <article class="stallion-card">
+          <div class="stallion-image">
+            <img src="stallion3.jpg" alt="Majestic Star">
+          </div>
+          <div class="stallion-details">
+            <div class="details-content">
+              <h3 class="horse-name">Majestic Star</h3>
+              <p><i class="fa-solid fa-user"></i> Owner: <span>Ravi Kumar</span></p>
+              <p><i class="fa-solid fa-tractor"></i> Farm: <span>Blue Sky Ranch</span></p>
+              <p><i class="fa-solid fa-map-location-dot"></i> District: <span>Bangalore, KA</span></p>
+            </div>
+            <div class="details-footer">
+              <a href="#" class="details-btn">Show Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stallion Card 4 -->
+        <article class="stallion-card">
+          <div class="stallion-image">
+            <img src="stallion4.jpg" alt="Silver Arrow">
+          </div>
+          <div class="stallion-details">
+            <div class="details-content">
+              <h3 class="horse-name">Silver Arrow</h3>
+              <p><i class="fa-solid fa-user"></i> Owner: <span>Kavya Farms</span></p>
+              <p><i class="fa-solid fa-tractor"></i> Farm: <span>Golden Meadows</span></p>
+              <p><i class="fa-solid fa-map-location-dot"></i> District: <span>Hyderabad, TS</span></p>
+            </div>
+            <div class="details-footer">
+              <a href="#" class="details-btn">Show Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more stallion cards as needed -->
+      </div>
+
+      <!-- Mobile Slider Navigation -->
+      <div class="stallion-nav"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Trending Videos Section -->
+<section class="trending-videos">
+  <div class="container">
+    <h2>Trending Videos</h2>
+<p class="trending-subtext">
+      Watch the latest and most popular clips making waves right now.
+    </p>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/PAsB2_UNI4M"
+              frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/smnry5NH9gs"
+              frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/n4tK7LYFxI0"
+              frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+<!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/n4tK7LYFxI0"
+              frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+<!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/n4tK7LYFxI0"
+              frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <!-- Navigation arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+  
+
+<section id="accessories">
+  <div class="container accessories-layout">
+
+    <!-- Left: Slider Content -->
+    <div class="accessories-left">
+      <h4 class="section-tag">HORSE ACCESSORIES GUIDE</h4>
+      <h2>Purpose of Common Horse Accessories</h2>
+      <p>
+        Horse riding and care involve a variety of important accessories. Each 
+        serves a unique purpose to ensure the <strong>safety, comfort, and control</strong> 
+        of both horse and rider. Here are a few essentials:
+      </p>
+
+      <div class="accessories-slider">
+        <div class="accessories-item active">
+          <h3>Saddle</h3>
+          <p>
+            Provides the rider a secure and comfortable seat while protecting 
+            the horse’s back from direct pressure.
+          </p>
+        </div>
+
+        <div class="accessories-item">
+          <h3>Bit & Bridle</h3>
+          <p>
+            Used for communication and control. The bit rests in the horse’s mouth, 
+            while the bridle holds it in place and connects to the reins.
+          </p>
+        </div>
+
+        <div class="accessories-item">
+          <h3>Horse Shoes</h3>
+          <p>
+            Protect the horse’s hooves from wear and tear, especially on hard or rough ground.
+          </p>
+        </div>
+
+        <div class="accessories-item">
+          <h3>Girth & Stirrup</h3>
+          <p>
+            The girth secures the saddle to the horse, while stirrups give the rider balance and support.
+          </p>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="accessories-nav">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Fixed Image -->
+    <div class="accessories-right">
+      <img src="accessories.jpg" alt="Horse Accessories">
+    </div>
+
+  </div>
+</section>
+
+  <!-- Contact Form -->
+  <section class="section section-alt" id="contact">
+    <div class="container reveal">
+      <h2>Contact Us</h2>
+      <div class="contact">
+        <div class="contact-card">
+          <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>PetList Tamil</h4>
+        <p>Connecting pet lovers, horse breeders, and farms in Tamil Nadu.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#stallions">Stallions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="subfooter">&copy; 2025 PetList Tamil. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
