@@ -180,13 +180,63 @@ function setInitialZoom(sw) {
 
   function scrollToCard(index) {
     if (!isMobile()) return;
-    slider.scrollTo({ left: index * slider.clientWidth, behavior: 'smooth' });
+
+    const cardWidth = slider.querySelector('.stallion-card').offsetWidth + 15; // include gap
+    slider.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
   }
 
   // update active dash while scrolling
   slider.addEventListener('scroll', () => {
     if (!isMobile()) return;
-    const idx = Math.round(slider.scrollLeft / slider.clientWidth);
+
+    const cardWidth = slider.querySelector('.stallion-card').offsetWidth + 15; // include gap
+    let idx = Math.round(slider.scrollLeft / cardWidth);
+    if (idx >= cards.length) idx = cards.length - 1; // clamp to last card
+
+    nav.querySelectorAll('span').forEach((s, i) => s.classList.toggle('active', i === idx));
+  });
+
+  window.addEventListener('resize', createNav);
+  createNav();
+})();
+
+/* ======================== New Home Horses Slider (Mobile Only) ======================== */
+(function() {
+  const slider = document.querySelector('.new-home-horses .stallion-slider');
+  const cards = slider ? Array.from(slider.querySelectorAll('.stallion-card')) : [];
+  const nav = document.querySelector('.new-home-horses .stallion-nav');
+  if (!slider || !cards.length || !nav) return;
+
+  function isMobile() { return window.innerWidth <= 768; }
+
+  function createNav() {
+    nav.innerHTML = '';
+    if (!isMobile()) {
+      nav.style.display = 'none';
+      slider.style.transform = 'translateX(0)';
+      return;
+    }
+    nav.style.display = 'block';
+    cards.forEach((_, i) => {
+      const dash = document.createElement('span');
+      dash.textContent = '_'; // underscore nav
+      if (i === 0) dash.classList.add('active');
+      dash.addEventListener('click', () => scrollToCard(i));
+      nav.appendChild(dash);
+    });
+  }
+
+  function scrollToCard(index) {
+    if (!isMobile()) return;
+    const cardWidth = slider.querySelector('.stallion-card').offsetWidth + 15;
+    slider.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+  }
+
+  slider.addEventListener('scroll', () => {
+    if (!isMobile()) return;
+    const cardWidth = slider.querySelector('.stallion-card').offsetWidth + 15;
+    let idx = Math.round(slider.scrollLeft / cardWidth);
+    if (idx >= cards.length) idx = cards.length - 1;
     nav.querySelectorAll('span').forEach((s, i) => s.classList.toggle('active', i === idx));
   });
 

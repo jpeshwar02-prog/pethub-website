@@ -342,110 +342,6 @@ body {
 }
 
 
-
-
-
-/* ======================== Our Service Section – Updated ======================== */
-.trending-videos {
-  width: 100%;
-  padding: 0px 0;
-  background: #ffffff;
-  position: relative; /* ensure z-index stacking context */
-  z-index: 1;
-}
-
-.trending-videos h2 {
-  text-align: center;
-  font-size: clamp(2rem, 2.5vw, 2.5rem);
-  margin-bottom: 40px;
-  color: var(--text);
-}
-
-.trending-videos .container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px 20px;
-  position: relative; /* for swiper overlay containment */
-}
-
-/* Swiper wrapper adjustments */
-.trending-videos .swiper {
-  width: 100%;
-padding-top: 40px; 
-  padding-bottom: 75px;
-  overflow: hidden; /* allow the scaled slide to extend upward */
-  box-sizing: border-box;
-}
-
-.trending-videos .swiper-wrapper {
-  display: flex;
-  align-items: flex-start;
-}
-
-/* Video cards */
-.trending-videos .video-wrapper {
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 16/9;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  background: #000;
-  margin: 0 10px;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-/* iframe */
-.trending-videos .video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-/* navigation buttons */
-.trending-videos .swiper-button-prev,
-.trending-videos .swiper-button-next {
-  color: var(--accent);
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  padding: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  z-index: 10;
-}
-
-/* explicitly anchor each side */
-.trending-videos .swiper-button-prev {
-  left: 18px;   /* distance from left edge */
-}
-
-.trending-videos .swiper-button-next {
-  right: 18px;  /* distance from right edge */
-}
-
-.trending-videos .swiper-button-next:hover,
-.trending-videos .swiper-button-prev:hover {
-  background: var(--accent);
-  color: #fff;
-}
-
-
-/* pagination */
-.trending-videos .swiper-pagination {
-  bottom: 2px !important;
-  z-index: 10;
-}
-.trending-videos .swiper-pagination-bullet {
-  background: #ccc;
-  opacity: 1;
-}
-.trending-videos .swiper-pagination-bullet-active {
-  background: var(--accent);
-}
-
 /* ======================== Our Service Section – Updated ======================== */
 .services-grid {
   display: grid;
@@ -690,31 +586,39 @@ padding-top: 40px;
   width: 100%;
   padding: 0px 0;
   background: #ffffff;
-  position: relative; /* ensure z-index stacking context */
+  position: relative;
   z-index: 1;
 }
 
 .trending-videos h2 {
   text-align: center;
   font-size: clamp(2rem, 2.5vw, 2.5rem);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: var(--text);
+}
+
+.trending-videos .trending-subtext {
+  text-align: center;
+  max-width: 600px;
+  margin: -20px auto 40px;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .trending-videos .container {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 20px 20px;
-  position: relative; /* for swiper overlay containment */
+  padding: 20px;
+  position: relative;
 }
 
 /* Swiper wrapper adjustments */
-/* Swiper wrapper adjustments */
 .trending-videos .swiper {
   width: 100%;
-  padding: 40px 20px 75px;   /* extra side padding */
-  overflow: hidden;         /* allow scaled slide to extend */
+  padding: 40px 20px 75px;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -736,7 +640,6 @@ padding-top: 40px;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* iframe */
 .trending-videos .video-wrapper iframe {
   width: 100%;
   height: 100%;
@@ -744,54 +647,12 @@ padding-top: 40px;
   display: block;
 }
 
-/* navigation buttons */
-.trending-videos .swiper-button-prev,
-.trending-videos .swiper-button-next {
-  color: var(--accent);
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  padding: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  z-index: 10;
-}
-
-/* explicitly anchor each side */
-.trending-videos .swiper-button-prev {
-  left: 18px;   /* distance from left edge */
-}
-
-.trending-videos .swiper-button-next {
-  right: 18px;  /* distance from right edge */
-}
-
-.trending-videos .swiper-button-next:hover,
-.trending-videos .swiper-button-prev:hover {
-  background: var(--accent);
-  color: #fff;
-}
-
-
-/* pagination */
-.trending-videos .swiper-pagination {
-  bottom: 2px !important;
-  z-index: 10;
-}
-.trending-videos .swiper-pagination-bullet {
-  background: #ccc;
-  opacity: 1;
-}
-.trending-videos .swiper-pagination-bullet-active {
-  background: var(--accent);
-}
-
-/* ======================== Zoom effect for active video ======================== */
+/* Swiper zoom effect */
 .trending-videos .swiper-slide {
   opacity: 0.6;
   transform: scale(0.9);
   transition: transform 0.5s ease, opacity 0.5s ease;
- transform-origin: center center;
+  transform-origin: center center;
   z-index: 1;
 }
 
@@ -804,27 +665,55 @@ padding-top: 40px;
 
 .trending-videos .swiper-slide-active {
   opacity: 1;
-  transform: scale(1.1); /* slightly smaller scale to fit better */
+  transform: scale(1.1);
   z-index: 3;
 }
 
-.trending-videos .trending-subtext {
-  text-align: center;
-  max-width: 600px;
-  margin: -30px auto 40px; /* pulls it closer to the heading */
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.5;
+/* Navigation buttons */
+.trending-videos .swiper-button-prev,
+.trending-videos .swiper-button-next {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  z-index: 10;
 }
 
-/* override example */
-.swiper-horizontal .swiper-button-next,
-.swiper-horizontal .swiper-button-prev {
-  right: 12px;   /* or any value you prefer */
-  left: auto;
+.trending-videos .swiper-button-prev { left: 18px; }
+.trending-videos .swiper-button-next { right: 18px; }
+
+.trending-videos .swiper-button-prev:hover,
+.trending-videos .swiper-button-next:hover {
+  background: var(--accent);
+  color: #fff;
 }
 
-/* responsive */
+/* Pagination – horizontal line style */
+.trending-videos .swiper-pagination {
+  bottom: 2px !important;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.trending-videos .swiper-pagination-bullet {
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  background: #ccc;
+  opacity: 1;
+  transition: background 0.3s ease;
+}
+
+.trending-videos .swiper-pagination-bullet-active {
+  background: var(--accent);
+}
+
+/* Responsive adjustments */
 @media (max-width: 992px) {
   .trending-videos .video-wrapper {
     max-width: 300px;
@@ -833,16 +722,36 @@ padding-top: 40px;
 }
 
 @media (max-width: 640px) {
-  .trending-videos .video-wrapper {
-    max-width: 100%;
-    margin: 0 5px;
+  .trending-videos .swiper-button-prev,
+  .trending-videos .swiper-button-next {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.9);
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
-  .trending-videos .swiper-button-next,
-  .trending-videos .swiper-button-prev {
-    display: none;
-  }
-} 
 
+  .trending-videos .swiper-button-prev::after,
+  .trending-videos .swiper-button-next::after {
+    font-size: 16px; /* smaller arrow icon */
+  }
+
+  .trending-videos .swiper-button-prev { left: 5px; }
+  .trending-videos .swiper-button-next { right: 5px; }
+
+  .trending-videos .swiper-button-prev:hover,
+  .trending-videos .swiper-button-next:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+}
+
+
+
+
+/* ======================== Top Stallions Section ======================== */
 /* ======================== Top Stallions Section ======================== */
 .top-stallions {
   background: #f8f9fa;
@@ -954,14 +863,23 @@ padding-top: 40px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 0;
+    gap: 15px;               /* space between cards */
     padding-bottom: 10px;
+    padding-left: 15px;      /* small left padding for first card peek */
   }
-  .stallion-slider::-webkit-scrollbar { display: none; }
 
   .stallion-card {
-    flex: 0 0 100%;        /* show one card at a time */
+    flex: 0 0 85%;           /* slightly narrower to allow peek */
     scroll-snap-align: start;
+  }
+
+  /* peek effect for last card */
+  .stallion-card:last-child {
+    margin-right: 15px;      /* right margin so last card isn’t flush */
+  }
+
+  .stallion-slider::-webkit-scrollbar {
+    display: none;
   }
 
   /* ---- “–” Nav ---- */
@@ -989,6 +907,190 @@ padding-top: 40px;
     font-size: 1.6rem;
   }
   .section-subtitle {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+}
+
+/* ======================== Looking for a New Home Section ======================== */
+.new-home-horses {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.new-home-horses .stallion-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* ----- Section Headings ----- */
+.new-home-horses .section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.new-home-horses .section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* =================== Desktop / Tablet Grid =================== */
+.new-home-horses .stallion-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* ---------------- Card ---------------- */
+.new-home-horses .stallion-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.new-home-horses .stallion-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.new-home-horses .stallion-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.new-home-horses .stallion-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.new-home-horses .stallion-card:hover .stallion-image img {
+  transform: scale(1.05);
+}
+
+.new-home-horses .stallion-details {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.new-home-horses .horse-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+.new-home-horses .stallion-details p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 3px 0;
+}
+
+.new-home-horses .details-footer {
+  border-top: 1px solid #e2e2e2;
+  margin-top: 6px;
+  padding-top: 12px;
+  text-align: center;
+}
+.new-home-horses .details-btn {
+  background: #ff4d6d;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 6px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.new-home-horses .details-btn:hover {
+  background: #e13d5a;
+}
+
+/* =================== Show All Button (Desktop & Mobile) =================== */
+.new-home-horses .show-all-btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+  float: right;
+}
+.new-home-horses .show-all-btn:hover {
+  background: #e13d5a;
+}
+
+/* =================== Mobile Slider (≤768px) =================== */
+@media (max-width: 768px) {
+  .new-home-horses .stallion-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;              
+    padding-bottom: 10px;
+    padding-left: 15px;     
+  }
+
+  .new-home-horses .stallion-card {
+    flex: 0 0 85%;         
+    scroll-snap-align: start;
+  }
+
+  /* peek effect for last card */
+  .new-home-horses .stallion-card:last-child {
+    margin-right: 15px;     
+  }
+
+  .new-home-horses .stallion-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Pagination Line (Below Cards) */
+  .new-home-horses .stallion-nav {
+    text-align: left;
+    margin: 12px 15px 0 15px; 
+    font-size: 20px;           
+    letter-spacing: 8px;       
+    user-select: none;
+  }
+
+  .new-home-horses .stallion-nav span {
+    cursor: pointer;
+    color: #aaa;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  .new-home-horses .stallion-nav span.active {
+    color: #ff4d6d;
+  }
+
+  /* Show All Button Below Cards Right */
+  .new-home-horses .show-all-btn {
+    float: right;
+    margin: 10px 15px 0 0;
+  }
+}
+
+/* =================== Small Mobile Tweaks (≤480px) =================== */
+@media (max-width: 480px) {
+  .new-home-horses .section-title {
+    font-size: 1.6rem;
+  }
+  .new-home-horses .section-subtitle {
     font-size: 0.9rem;
     padding: 0 10px;
   }
